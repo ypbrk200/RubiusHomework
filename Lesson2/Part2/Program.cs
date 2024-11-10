@@ -2,7 +2,7 @@
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main
     {        
         int amount;
         decimal total = 0;

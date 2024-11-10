@@ -4,7 +4,7 @@
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         Dictionary<string, int> inventory = new Dictionary<string, int>();
         bool running = true;

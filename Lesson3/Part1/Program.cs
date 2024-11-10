@@ -11,7 +11,7 @@ class Program
         return Math.Round(tax, 2);
     }
 
-    static void Main(string[] args)
+    static void Main()
     {
         decimal income;
         Console.Write("Введите сумму дохода: ");
