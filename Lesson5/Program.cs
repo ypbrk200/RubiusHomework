@@ -2,15 +2,15 @@
 
 class Program
 {
-    static int inputDimension(string num)
+    static double inputDimension(string num)
     {
-        int Dimension;
-        if (!int.TryParse(num, out Dimension))
+        double Dimension;
+        if (!double.TryParse(num, out Dimension))
         {
-            Console.WriteLine("Число должно быть целым: ");
-            while (!int.TryParse(Console.ReadLine(), out Dimension))
+            Console.WriteLine("Введите число: ");
+            while (!double.TryParse(Console.ReadLine(), out Dimension))
             {
-                Console.Write("Число должно быть целым: ");
+                Console.Write("Введите число: ");
             }
             return Dimension;
         }
@@ -23,7 +23,7 @@ class Program
     {
         // Примеры использования (задание 2)
         Console.Write("Круг. Введите длину радиуса: ");
-        int Radius = inputDimension(Console.ReadLine());
+        double Radius = inputDimension(Console.ReadLine());
         try
         {
             Circle circle = new Circle(Radius);
@@ -36,9 +36,9 @@ class Program
             Console.WriteLine($"Фигура 'Круг' - ошибка: {ex.Message}");
         }
         Console.Write("Прямоугольник. Введите длину: ");
-        int rectA = inputDimension(Console.ReadLine());
+        double rectA = inputDimension(Console.ReadLine());
         Console.Write("Прямоугольник. Введите ширину: ");
-        int rectB = inputDimension(Console.ReadLine());
+        double rectB = inputDimension(Console.ReadLine());
         try
         {
             Rectangle rectangle = new Rectangle(rectA, rectB);
@@ -51,11 +51,11 @@ class Program
             Console.WriteLine($"Фигура 'Прямоугольник' - ошибка: {ex.Message}");
         }
         Console.Write("Треугольник. Введите длину стороны 1: ");
-        int triA = inputDimension(Console.ReadLine());
+        double triA = inputDimension(Console.ReadLine());
         Console.Write("Треугольник. Введите длину стороны 2: ");
-        int triB = inputDimension(Console.ReadLine());        
+        double triB = inputDimension(Console.ReadLine());        
         Console.Write("Треугольник. Введите длину стороны 3: ");
-        int triC = inputDimension(Console.ReadLine());
+        double triC = inputDimension(Console.ReadLine());
         try
         {
             Triangle triangle = new Triangle(triA, triB, triC);
@@ -68,13 +68,13 @@ class Program
             Console.WriteLine($"Фигура 'Треугольник' - ошибка: {ex.Message}");
         }        
         Console.Write("Трапеция. Введите длину верхнего основания: ");
-        int trapA = inputDimension(Console.ReadLine());
+        double trapA = inputDimension(Console.ReadLine());
         Console.Write("Трапеция. Введите длину нижнего основания: ");
-        int trapB = inputDimension(Console.ReadLine());        
+        double trapB = inputDimension(Console.ReadLine());        
         Console.Write("Трапеция. Введите длину левой стороны: ");
-        int trapC = inputDimension(Console.ReadLine());        
+        double trapC = inputDimension(Console.ReadLine());        
         Console.Write("Трапеция. Введите длину правой стороны: ");
-        int trapD = inputDimension(Console.ReadLine());
+        double trapD = inputDimension(Console.ReadLine());
         try
         {
             Trapezium trapezium = new Trapezium(trapA, trapB, trapC, trapD);
