@@ -6,6 +6,17 @@ namespace Lesson10
 {
     class Program
     {
+        /*
+        Базу данных создал следующую:
+        CREATE DATABASE crud_app;
+        c crud_app;
+        CREATE TABLE Items
+        (
+            Id SERIAL PRIMARY KEY,
+            Name VARCHAR(100) NOT NULL,
+            Description TEXT
+        );
+        */
         static string connectionString = "Host=localhost;Username=postgres;Password=1;Database=Lesson10";
 
         static void Main()
